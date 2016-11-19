@@ -3,13 +3,13 @@ require 'config'
 
 --Get the client IP
 function get_client_ip()
-    CLIENT_IP = ngx.req.get_headers()["X_real_ip"]
-    if CLIENT_IP == nil then
-        CLIENT_IP = ngx.req.get_headers()["X_Forwarded_For"]
-    end
-    if CLIENT_IP == nil then
+    -- CLIENT_IP = ngx.req.get_headers()["X_real_ip"]
+    -- if CLIENT_IP == nil then
+    --    CLIENT_IP = ngx.req.get_headers()["X_Forwarded_For"]
+    -- end
+    -- if CLIENT_IP == nil then
         CLIENT_IP  = ngx.var.remote_addr 
-    end
+    -- end
     if CLIENT_IP == nil then
         CLIENT_IP  = "unknown"
     end

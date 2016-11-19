@@ -5,7 +5,7 @@ config_waf_enable = "on"
 --log dir
 config_log_dir = "/tmp"
 --rule setting
-config_rule_dir = "/usr/local/openresty/nginx/conf/waf/rule-config"
+config_rule_dir = "/production/server/nginx/conf/waf/rule-config"
 --enable/disable white url
 config_white_url_check = "on"
 --enable/disable white ip
@@ -23,22 +23,22 @@ config_cookie_check = "on"
 --enable/disable cc filtering
 config_cc_check = "on"
 --cc rate the xxx of xxx seconds
-config_cc_rate = "10/60"
+config_cc_rate = "400/10"
 --enable/disable post filtering
 config_post_check = "on"
 --config waf output redirect/html
 config_waf_output = "html"
 --if config_waf_output ,setting url
-config_waf_redirect_url = "https://www.unixhot.com"
+config_waf_redirect_url = "http://www.jdi.com"
 config_output_html=[[
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="zh-cn" />
-<title>网站防火墙</title>
+<title>HQ Cloud Waf</title>
 </head>
 <body>
-<h1 align="center"> 欢迎白帽子进行授权安全测试，安全漏洞请联系QQ：1111111。
+<h1 align="center"> HQ-ANTI-BOT
 </body>
 </html>
 ]]
