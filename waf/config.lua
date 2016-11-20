@@ -3,7 +3,7 @@
 --waf status
 config_waf_enable = "on"
 --log dir
-config_log_dir = "/tmp"
+config_log_dir = "/tmp/waf_logs"
 --rule setting
 config_rule_dir = "/production/server/nginx/conf/waf/rule-config"
 --enable/disable white url

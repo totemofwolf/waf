@@ -49,7 +49,7 @@ function white_url_check()
         if URL_WHITE_RULES ~= nil then
             for _,rule in pairs(URL_WHITE_RULES) do
                 if rule ~= "" and rulematch(REQ_URI,rule,"jo") then
-                    return true 
+                    return true
                 end
             end
         end
@@ -59,7 +59,7 @@ end
 --deny cc attack
 function cc_attack_check()
     if config_cc_check == "on" then
-        local ATTACK_URI=ngx.var.uri
+        local ATTACK_URI = ngx.var.uri
         local CC_TOKEN = get_client_ip()..ATTACK_URI
         local limit = ngx.shared.limit
         CCcount=tonumber(string.match(config_cc_rate,'(.*)/'))
@@ -173,4 +173,4 @@ function post_attack_check()
         return true
     end
     return false
-end 
+end
